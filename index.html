@@ -1,0 +1,1541 @@
+<!DOCTYPE html>
+<html lang="it" prefix="og: https://ogp.me/ns#">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- ═══ SEO META ═══ -->
+  <title>h24italia — Informazione italiana indipendente, ogni giorno</title>
+  <meta name="description" content="h24italia è il giornale digitale italiano che racconta il presente con rigore, profondità e uno sguardo editoriale indipendente. Cronaca, cultura, economia, società.">
+  <meta name="keywords" content="notizie italia, informazione italiana, cronaca italiana, cultura, economia, politica, società, giornale online">
+  <meta name="author" content="Redazione h24italia">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+  <link rel="canonical" href="https://h24italia.it/">
+
+  <!-- ═══ OPEN GRAPH ═══ -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="h24italia">
+  <meta property="og:title" content="h24italia — Il presente, ogni giorno">
+  <meta property="og:description" content="Informazione italiana indipendente. Ogni giorno, con rigore e passione, raccontiamo il Paese che siamo.">
+  <meta property="og:url" content="https://h24italia.it/">
+  <meta property="og:locale" content="it_IT">
+
+  <!-- ═══ TWITTER CARD ═══ -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@h24italia">
+  <meta name="twitter:title" content="h24italia — Il presente, ogni giorno">
+  <meta name="twitter:description" content="Informazione italiana indipendente. Cronaca, cultura, economia e società.">
+
+  <!-- ═══ JSON-LD STRUCTURED DATA ═══ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://h24italia.it/#website",
+        "url": "https://h24italia.it/",
+        "name": "h24italia",
+        "description": "Informazione italiana indipendente, ogni giorno",
+        "inLanguage": "it",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://h24italia.it/cerca?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://h24italia.it/#organization",
+        "name": "h24italia",
+        "url": "https://h24italia.it/",
+        "sameAs": [
+          "https://www.instagram.com/h24italia",
+          "https://www.tiktok.com/@h24italia"
+        ]
+      },
+      {
+        "@type": "NewsArticle",
+        "headline": "Il futuro dell'Italia si decide adesso",
+        "description": "Il dibattito politico italiano entra in una fase cruciale tra riforme attese da anni e una società che chiede risposte concrete.",
+        "datePublished": "2026-05-01",
+        "dateModified": "2026-05-01",
+        "author": { "@type": "Organization", "name": "Redazione h24italia" },
+        "publisher": { "@type": "Organization", "name": "h24italia", "url": "https://h24italia.it/" },
+        "mainEntityOfPage": "https://h24italia.it/futuro-italia"
+      }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600;1,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&family=Bebas+Neue&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --ink:      #111010;
+      --paper:    #faf7f2;
+      --cream:    #f0ece3;
+      --warm:     #e8e2d6;
+      --red:      #b5291c;
+      --gold:     #b8963e;
+      --muted:    #7a7060;
+      --mid:      #4a4640;
+      --line:     rgba(0,0,0,0.10);
+      --line-w:   rgba(255,255,255,0.10);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--paper);
+      color: var(--ink);
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 17px;
+      line-height: 1.75;
+      overflow-x: hidden;
+    }
+
+    /* ─── SELECTION ─── */
+    ::selection { background: var(--gold); color: #fff; }
+
+    /* ─── SCROLLBAR ─── */
+    ::-webkit-scrollbar { width: 5px; }
+    ::-webkit-scrollbar-track { background: var(--paper); }
+    ::-webkit-scrollbar-thumb { background: var(--ink); }
+
+    /* ══════════════════════════════════════
+       TICKER
+    ══════════════════════════════════════ */
+    .ticker {
+      background: var(--ink);
+      height: 34px;
+      display: flex;
+      overflow: hidden;
+      position: relative;
+      z-index: 200;
+    }
+    .ticker-label {
+      background: var(--red);
+      color: #fff;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 12px;
+      letter-spacing: 3px;
+      padding: 0 18px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-shrink: 0;
+    }
+    .ticker-dot {
+      width: 7px; height: 7px;
+      background: #fff;
+      border-radius: 50%;
+      animation: blink 1.3s infinite;
+    }
+    @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.2} }
+    .ticker-roll {
+      overflow: hidden;
+      flex: 1;
+      display: flex;
+      align-items: center;
+    }
+    .ticker-inner {
+      display: flex;
+      white-space: nowrap;
+      animation: roll 30s linear infinite;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 12px;
+      letter-spacing: 0.4px;
+      color: rgba(255,255,255,0.85);
+    }
+    .ticker-inner span { padding: 0 44px; }
+    .ticker-inner span::before { content: '◆ '; color: var(--gold); font-size: 9px; }
+    @keyframes roll { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
+
+    /* ══════════════════════════════════════
+       HEADER
+    ══════════════════════════════════════ */
+    header {
+      background: rgba(250,247,242,0.94);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1.5px solid var(--ink);
+      padding: 0 44px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .header-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 0 10px;
+      border-bottom: 1px solid var(--line);
+    }
+    .logo {
+      text-decoration: none;
+      color: var(--ink);
+      display: flex;
+      flex-direction: column;
+      line-height: 1;
+    }
+    .logo-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 34px;
+      font-weight: 900;
+      letter-spacing: -1.5px;
+    }
+    .logo-name em { font-style: italic; color: var(--red); }
+    .logo-tagline {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 9.5px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--muted);
+      font-weight: 400;
+      margin-top: 3px;
+    }
+    .header-date {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 10.5px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-align: right;
+      line-height: 1.5;
+    }
+    nav {
+      display: flex;
+      gap: 0;
+      padding: 8px 0 0;
+      overflow-x: auto;
+    }
+    nav a {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--mid);
+      text-decoration: none;
+      font-weight: 500;
+      padding: 6px 18px 8px;
+      border-bottom: 2px solid transparent;
+      transition: all 0.2s;
+      white-space: nowrap;
+    }
+    nav a:hover, nav a.active { color: var(--ink); border-bottom-color: var(--red); }
+    nav a:first-child { padding-left: 0; }
+
+    /* ══════════════════════════════════════
+       HERO — editorial full-bleed
+    ══════════════════════════════════════ */
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 380px;
+      gap: 0;
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 0 44px;
+      border-bottom: 1.5px solid var(--ink);
+    }
+    .hero-lead {
+      padding: 48px 44px 48px 0;
+      border-right: 1px solid var(--line);
+      animation: up 0.8s ease both;
+    }
+    .hero-kicker {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 10.5px;
+      letter-spacing: 3.5px;
+      text-transform: uppercase;
+      color: var(--red);
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    .hero-kicker::before {
+      content: '';
+      width: 28px; height: 2px;
+      background: var(--red);
+      flex-shrink: 0;
+    }
+    .hero-lead h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(44px, 5vw, 72px);
+      font-weight: 900;
+      line-height: 1.02;
+      letter-spacing: -2.5px;
+      margin-bottom: 24px;
+      max-width: 680px;
+    }
+    .hero-lead h1 em { font-style: italic; color: var(--red); }
+    .hero-standfirst {
+      font-family: 'Source Serif 4', serif;
+      font-size: 20px;
+      font-weight: 300;
+      line-height: 1.6;
+      color: var(--mid);
+      max-width: 600px;
+      margin-bottom: 32px;
+      font-style: italic;
+    }
+
+    /* AI image block */
+    .ai-image {
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 28px;
+    }
+    .ai-image-inner {
+      width: 100%;
+      aspect-ratio: 16/7;
+      background: linear-gradient(135deg, #1a1a1a 0%, #2d1f1a 35%, #1a2030 70%, #0d0d0d 100%);
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-start;
+      padding: 20px 24px;
+      position: relative;
+      overflow: hidden;
+    }
+    .ai-image-inner::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 30% 40%, rgba(184,150,62,0.18) 0%, transparent 55%),
+        radial-gradient(ellipse at 80% 20%, rgba(181,41,28,0.12) 0%, transparent 45%),
+        radial-gradient(ellipse at 60% 80%, rgba(26,40,60,0.4) 0%, transparent 60%);
+    }
+    .ai-image-inner::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+      opacity: 0.5;
+      pointer-events: none;
+    }
+    .ai-badge {
+      position: relative;
+      z-index: 2;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 9px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.55);
+      font-weight: 400;
+      background: rgba(0,0,0,0.4);
+      padding: 4px 10px;
+      backdrop-filter: blur(4px);
+    }
+
+    .hero-byline {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--muted);
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .hero-byline strong { color: var(--ink); }
+
+    .hero-sidebar {
+      padding: 40px 0 40px 36px;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      animation: up 0.8s 0.15s ease both;
+    }
+    .sidebar-article {
+      padding: 22px 0;
+      border-bottom: 1px solid var(--line);
+      cursor: pointer;
+    }
+    .sidebar-article:first-child { padding-top: 0; }
+    .sidebar-article:last-child { border-bottom: none; }
+    .sidebar-article:hover .sa-title { color: var(--red); }
+    .sa-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 38px;
+      font-weight: 900;
+      color: var(--warm);
+      line-height: 1;
+      margin-bottom: 6px;
+      letter-spacing: -1px;
+    }
+    .sa-cat {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 9.5px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--red);
+      font-weight: 500;
+      margin-bottom: 6px;
+    }
+    .sa-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 17px;
+      font-weight: 600;
+      line-height: 1.3;
+      transition: color 0.2s;
+    }
+
+    @keyframes up {
+      from { opacity:0; transform:translateY(22px); }
+      to   { opacity:1; transform:translateY(0); }
+    }
+
+    /* ══════════════════════════════════════
+       SECTION HEADS
+    ══════════════════════════════════════ */
+    .sh {
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 52px 44px 26px;
+      display: flex;
+      align-items: baseline;
+      gap: 14px;
+    }
+    .sh h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 20px;
+      letter-spacing: 4.5px;
+    }
+    .sh .sub {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .sh::after { content:''; flex:1; height:1px; background:var(--line); }
+    .sh a {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 12px;
+      letter-spacing: 2px;
+      color: var(--ink);
+      text-decoration: none;
+      border-bottom: 1px solid currentColor;
+      padding-bottom: 1px;
+      transition: color 0.2s;
+    }
+    .sh a:hover { color: var(--red); }
+
+    /* ══════════════════════════════════════
+       FEATURE ARTICLES GRID
+    ══════════════════════════════════════ */
+    .articles-wrap {
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 0 44px;
+    }
+
+    /* — PRIME (2 col) — */
+    .prime-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      gap: 1px;
+      background: var(--line);
+      border: 1px solid var(--line);
+      margin-bottom: 1px;
+    }
+    .prime-card {
+      background: var(--paper);
+      padding: 36px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .prime-card:hover { background: var(--cream); }
+    .prime-card:hover .pc-title { color: var(--red); }
+    .pc-cat {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 9.5px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--red);
+      font-weight: 500;
+      margin-bottom: 14px;
+    }
+    .pc-image {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    .pc-image .ai-image-inner { aspect-ratio: 16/8; }
+    .pc-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      font-weight: 700;
+      line-height: 1.15;
+      margin-bottom: 14px;
+      transition: color 0.2s;
+    }
+    .pc-title.large {
+      font-size: 38px;
+      letter-spacing: -1px;
+    }
+    .pc-body {
+      font-family: 'Source Serif 4', serif;
+      font-size: 15.5px;
+      color: var(--mid);
+      line-height: 1.75;
+      margin-bottom: 20px;
+      font-weight: 300;
+    }
+    .pc-meta {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 10.5px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--muted);
+      display: flex;
+      gap: 16px;
+    }
+    .pc-meta strong { color: var(--ink); }
+    .read-more {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 10.5px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-weight: 500;
+      color: var(--ink);
+      text-decoration: none;
+      border-bottom: 1px solid var(--ink);
+      padding-bottom: 1px;
+      transition: all 0.2s;
+      margin-top: 6px;
+    }
+    .read-more::after { content: '→'; transition: transform 0.2s; }
+    .read-more:hover { color: var(--red); border-color: var(--red); }
+    .read-more:hover::after { transform: translateX(3px); }
+
+    /* — SECONDARY (3 col) — */
+    .second-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--line);
+      border: 1px solid var(--line);
+      border-top: none;
+    }
+    .sc-card {
+      background: var(--paper);
+      padding: 28px;
+      cursor: pointer;
+      transition: background 0.2s;
+      border-top: 3px solid transparent;
+    }
+    .sc-card:hover { background: var(--cream); border-top-color: var(--red); }
+    .sc-card:hover .sc-title { color: var(--red); }
+    .sc-cat {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 9.5px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--red);
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+    .sc-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 21px;
+      font-weight: 600;
+      line-height: 1.2;
+      margin-bottom: 10px;
+      transition: color 0.2s;
+    }
+    .sc-body {
+      font-size: 14px;
+      color: var(--mid);
+      line-height: 1.7;
+      font-weight: 300;
+      margin-bottom: 16px;
+    }
+    .sc-meta {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 10px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--muted);
+      display: flex;
+      gap: 12px;
+    }
+
+    /* ══════════════════════════════════════
+       DEEP READ BAND
+    ══════════════════════════════════════ */
+    .deep-band {
+      background: var(--ink);
+      color: var(--paper);
+      margin-top: 56px;
+      padding: 80px 44px;
+      position: relative;
+      overflow: hidden;
+    }
+    .deep-band::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 15% 50%, rgba(181,41,28,0.10) 0%, transparent 50%),
+        radial-gradient(circle at 90% 20%, rgba(184,150,62,0.07) 0%, transparent 40%);
+      pointer-events: none;
+    }
+    .deep-inner {
+      max-width: 1300px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      position: relative;
+      z-index: 2;
+    }
+    .deep-label {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 10.5px;
+      letter-spacing: 5px;
+      color: var(--gold);
+      margin-bottom: 22px;
+    }
+    .deep-inner h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(30px, 3.2vw, 48px);
+      font-weight: 400;
+      font-style: italic;
+      line-height: 1.15;
+      margin-bottom: 20px;
+      letter-spacing: -0.5px;
+    }
+    .deep-inner h3 strong { font-style: normal; font-weight: 900; }
+    .deep-inner p {
+      font-family: 'Source Serif 4', serif;
+      font-size: 16px;
+      color: rgba(250,247,242,0.62);
+      line-height: 1.8;
+      font-weight: 300;
+      margin-bottom: 24px;
+    }
+    .deep-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 13px;
+      letter-spacing: 3px;
+      color: var(--paper);
+      text-decoration: none;
+      padding: 13px 24px;
+      border: 1px solid rgba(250,247,242,0.4);
+      transition: all 0.3s;
+    }
+    .deep-cta:hover { background: var(--paper); color: var(--ink); }
+    .deep-cta::after { content: '→'; transition: transform 0.25s; }
+    .deep-cta:hover::after { transform: translateX(4px); }
+    .deep-divider {
+      position: absolute;
+      left: 50%;
+      top: 0; bottom: 0;
+      width: 1px;
+      background: rgba(250,247,242,0.08);
+    }
+
+    /* ══════════════════════════════════════
+       PULL QUOTE
+    ══════════════════════════════════════ */
+    .pull-quote {
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 60px 44px;
+      display: flex;
+      align-items: flex-start;
+      gap: 32px;
+    }
+    .pull-quote::before {
+      content: '"';
+      font-family: 'Playfair Display', serif;
+      font-size: 160px;
+      line-height: 0.7;
+      color: var(--warm);
+      flex-shrink: 0;
+      font-weight: 900;
+    }
+    .pull-quote blockquote {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(24px, 2.8vw, 40px);
+      font-style: italic;
+      font-weight: 400;
+      line-height: 1.25;
+      letter-spacing: -0.5px;
+      color: var(--ink);
+    }
+    .pull-quote blockquote strong { font-style: normal; font-weight: 900; color: var(--red); }
+    .pull-quote cite {
+      display: block;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--muted);
+      font-style: normal;
+      margin-top: 18px;
+    }
+
+    /* ══════════════════════════════════════
+       SOCIAL VIDEO — minimal, link-out only
+    ══════════════════════════════════════ */
+    .social-section {
+      background: var(--cream);
+      border-top: 1.5px solid var(--ink);
+      border-bottom: 1.5px solid var(--ink);
+      margin-top: 56px;
+      padding: 52px 44px;
+    }
+    .social-inner {
+      max-width: 1300px;
+      margin: 0 auto;
+    }
+    .social-head {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      margin-bottom: 36px;
+    }
+    .social-head h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(28px, 3vw, 46px);
+      font-weight: 900;
+      letter-spacing: -1px;
+      line-height: 1;
+    }
+    .social-head h2 em { font-style: italic; color: var(--red); }
+    .social-head p {
+      font-family: 'Source Serif 4', serif;
+      font-size: 14px;
+      color: var(--muted);
+      max-width: 320px;
+      text-align: right;
+      line-height: 1.6;
+      font-style: italic;
+    }
+    .social-cards {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+    .social-card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      padding: 0;
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+    }
+    .social-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+    }
+    .social-card:hover .sc-arrow { transform: translateX(4px); }
+    .social-thumb {
+      aspect-ratio: 9/11;
+      position: relative;
+      overflow: hidden;
+    }
+    .social-thumb .ai-image-inner {
+      width: 100%;
+      height: 100%;
+      aspect-ratio: unset;
+    }
+    .social-platform {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      z-index: 3;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 10px;
+      letter-spacing: 2px;
+      padding: 3px 9px;
+      background: var(--red);
+      color: #fff;
+    }
+    .social-views {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      z-index: 3;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 10px;
+      letter-spacing: 1px;
+      padding: 3px 9px;
+      background: rgba(0,0,0,0.7);
+      color: #fff;
+      font-weight: 500;
+    }
+    .social-views::before { content: '▶ '; font-size: 8px; color: var(--gold); }
+    .social-card-body { padding: 16px 18px 18px; flex: 1; display: flex; flex-direction: column; }
+    .social-card-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 1.3;
+      margin-bottom: 10px;
+      flex: 1;
+    }
+    .sc-link {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--muted);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .sc-arrow { transition: transform 0.2s; }
+    .social-disclaimer {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 11px;
+      color: var(--muted);
+      margin-top: 22px;
+      padding-top: 16px;
+      border-top: 1px solid var(--line);
+      font-style: italic;
+      letter-spacing: 0.3px;
+    }
+
+    /* ══════════════════════════════════════
+       TERRITORIO — long-form vertical
+    ══════════════════════════════════════ */
+    .territorio {
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 0 44px;
+    }
+    .territorio-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 340px;
+      gap: 1px;
+      background: var(--line);
+      border: 1px solid var(--line);
+    }
+    .terr-card {
+      background: var(--paper);
+      padding: 32px 28px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .terr-card:hover { background: var(--cream); }
+    .terr-card:hover .terr-title { color: var(--red); }
+    .terr-cat {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 9.5px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--red);
+      font-weight: 500;
+      margin-bottom: 8px;
+    }
+    .terr-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 1.2;
+      margin-bottom: 12px;
+      transition: color 0.2s;
+    }
+    .terr-body {
+      font-size: 14px;
+      color: var(--mid);
+      line-height: 1.7;
+      font-weight: 300;
+      margin-bottom: 14px;
+    }
+    .terr-meta {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 10px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    /* Sidebar column */
+    .terr-sidebar {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 28px;
+    }
+    .terr-sidebar h4 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 12px;
+      letter-spacing: 4px;
+      color: var(--gold);
+      margin-bottom: 20px;
+    }
+    .mini-item {
+      padding: 14px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+      cursor: pointer;
+    }
+    .mini-item:first-of-type { padding-top: 0; }
+    .mini-item:last-of-type { border-bottom: none; }
+    .mini-item:hover .mini-title { color: var(--gold); }
+    .mini-cat {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 9px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.4);
+      margin-bottom: 5px;
+    }
+    .mini-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 1.3;
+      transition: color 0.2s;
+    }
+
+    /* ══════════════════════════════════════
+       GOLD BAND
+    ══════════════════════════════════════ */
+    .gold-band {
+      background: var(--gold);
+      color: var(--ink);
+      padding: 32px 44px;
+      margin-top: 56px;
+      text-align: center;
+    }
+    .gold-band p {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(20px, 2.5vw, 34px);
+      font-style: italic;
+      font-weight: 400;
+      letter-spacing: -0.3px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .gold-band strong { font-style: normal; font-weight: 900; }
+
+    /* ══════════════════════════════════════
+       NEWSLETTER
+    ══════════════════════════════════════ */
+    .newsletter {
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 56px 44px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+      border-top: 1.5px solid var(--ink);
+      border-bottom: 1.5px solid var(--ink);
+    }
+    .nl-text h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(28px, 3vw, 44px);
+      font-weight: 900;
+      letter-spacing: -1.5px;
+      line-height: 1.05;
+      margin-bottom: 16px;
+    }
+    .nl-text h3 em { font-style: italic; color: var(--red); }
+    .nl-text p {
+      font-family: 'Source Serif 4', serif;
+      font-size: 16px;
+      color: var(--mid);
+      line-height: 1.7;
+      font-weight: 300;
+    }
+    .nl-form {
+      display: flex;
+      gap: 0;
+    }
+    .nl-form input {
+      flex: 1;
+      background: var(--cream);
+      border: 1.5px solid var(--ink);
+      border-right: none;
+      padding: 14px 20px;
+      font-family: 'Source Serif 4', serif;
+      font-size: 15px;
+      color: var(--ink);
+      outline: none;
+      transition: background 0.2s;
+    }
+    .nl-form input:focus { background: #fff; }
+    .nl-form input::placeholder { color: var(--muted); font-style: italic; }
+    .nl-form button {
+      background: var(--ink);
+      color: var(--paper);
+      border: 1.5px solid var(--ink);
+      padding: 14px 28px;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 14px;
+      letter-spacing: 3px;
+      cursor: pointer;
+      transition: all 0.2s;
+      white-space: nowrap;
+    }
+    .nl-form button:hover { background: var(--red); border-color: var(--red); }
+
+    /* ══════════════════════════════════════
+       FOOTER
+    ══════════════════════════════════════ */
+    footer {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 60px 44px 28px;
+    }
+    .footer-top {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 56px;
+      border-bottom: 1px solid var(--line-w);
+      padding-bottom: 44px;
+      margin-bottom: 28px;
+      max-width: 1300px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .f-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 40px;
+      font-weight: 900;
+      letter-spacing: -2px;
+      line-height: 1;
+      margin-bottom: 14px;
+    }
+    .f-logo em { font-style: italic; color: var(--red); }
+    .f-desc {
+      font-family: 'Source Serif 4', serif;
+      font-size: 14px;
+      color: rgba(250,247,242,0.45);
+      line-height: 1.7;
+      font-weight: 300;
+      max-width: 340px;
+      margin-bottom: 20px;
+    }
+    .f-social { display: flex; gap: 14px; }
+    .f-social a {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 11px;
+      letter-spacing: 2px;
+      padding: 7px 12px;
+      border: 1px solid rgba(250,247,242,0.2);
+      color: rgba(250,247,242,0.5);
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    .f-social a:hover { border-color: var(--gold); color: var(--gold); }
+    .footer-col h4 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 11.5px;
+      letter-spacing: 4px;
+      color: var(--gold);
+      margin-bottom: 18px;
+    }
+    .footer-col a {
+      display: block;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 13px;
+      color: rgba(250,247,242,0.5);
+      text-decoration: none;
+      margin-bottom: 9px;
+      transition: color 0.2s;
+    }
+    .footer-col a:hover { color: var(--paper); }
+    .footer-bottom {
+      max-width: 1300px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 10.5px;
+      letter-spacing: 1px;
+      color: rgba(250,247,242,0.2);
+    }
+    .footer-bottom a {
+      color: rgba(250,247,242,0.3);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-bottom a:hover { color: var(--paper); }
+
+    /* ══════════════════════════════════════
+       AI PALETTE VARIANTS
+    ══════════════════════════════════════ */
+    .ai-v1::before {
+      background:
+        radial-gradient(ellipse at 30% 40%, rgba(184,150,62,0.22) 0%, transparent 55%),
+        radial-gradient(ellipse at 80% 20%, rgba(181,41,28,0.14) 0%, transparent 45%),
+        radial-gradient(ellipse at 60% 80%, rgba(26,40,60,0.5) 0%, transparent 60%) !important;
+    }
+    .ai-v2 { background: linear-gradient(135deg, #0d1a0d 0%, #1a2d1f 40%, #0a1020 100%) !important; }
+    .ai-v2::before {
+      background:
+        radial-gradient(ellipse at 20% 60%, rgba(30,110,50,0.22) 0%, transparent 50%),
+        radial-gradient(ellipse at 75% 30%, rgba(184,150,62,0.15) 0%, transparent 45%) !important;
+    }
+    .ai-v3 { background: linear-gradient(135deg, #0f0f1a 0%, #1a1230 40%, #0a0a15 100%) !important; }
+    .ai-v3::before {
+      background:
+        radial-gradient(ellipse at 60% 40%, rgba(80,40,180,0.18) 0%, transparent 55%),
+        radial-gradient(ellipse at 20% 70%, rgba(181,41,28,0.10) 0%, transparent 40%) !important;
+    }
+    .ai-v4 { background: linear-gradient(135deg, #1a0a0a 0%, #2d1010 40%, #0d0d0d 100%) !important; }
+    .ai-v4::before {
+      background:
+        radial-gradient(ellipse at 40% 50%, rgba(181,41,28,0.25) 0%, transparent 55%),
+        radial-gradient(ellipse at 80% 20%, rgba(184,150,62,0.10) 0%, transparent 40%) !important;
+    }
+
+    /* ══════════════════════════════════════
+       SCROLL REVEAL
+    ══════════════════════════════════════ */
+    .reveal {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* ══════════════════════════════════════
+       RESPONSIVE
+    ══════════════════════════════════════ */
+    @media (max-width: 1024px) {
+      header, .hero, .sh, .articles-wrap, .pull-quote, .social-section,
+      .territorio, .newsletter, footer { padding-left: 24px; padding-right: 24px; }
+      .hero { grid-template-columns: 1fr; }
+      .hero-lead { border-right: none; padding-right: 0; border-bottom: 1px solid var(--line); padding-bottom: 36px; margin-bottom: 0; }
+      .hero-sidebar { padding-left: 0; padding-top: 32px; }
+      .prime-grid { grid-template-columns: 1fr; }
+      .second-grid { grid-template-columns: 1fr 1fr; }
+      .territorio-grid { grid-template-columns: 1fr 1fr; }
+      .social-cards { grid-template-columns: repeat(2, 1fr); }
+      .deep-inner { grid-template-columns: 1fr; gap: 44px; }
+      .deep-divider { display: none; }
+      .newsletter { grid-template-columns: 1fr; gap: 32px; }
+      .footer-top { grid-template-columns: 1fr 1fr; gap: 28px; }
+      .pull-quote { gap: 18px; }
+      .pull-quote::before { font-size: 100px; }
+    }
+    @media (max-width: 640px) {
+      .second-grid { grid-template-columns: 1fr; }
+      .social-cards { grid-template-columns: 1fr 1fr; }
+      .territorio-grid { grid-template-columns: 1fr; }
+      .footer-top { grid-template-columns: 1fr; }
+      .header-top { flex-wrap: wrap; gap: 10px; }
+      .social-head { flex-direction: column; gap: 12px; }
+      .social-head p { text-align: left; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- TICKER -->
+<div class="ticker" role="marquee" aria-label="Ultime notizie">
+  <div class="ticker-label"><span class="ticker-dot" aria-hidden="true"></span>Breaking</div>
+  <div class="ticker-roll">
+    <div class="ticker-inner" aria-hidden="true">
+      <span>Il governo approva il decreto lavoro: le novità per il 2025</span>
+      <span>Borsa di Milano: tecnologici in rialzo dello 0.8%</span>
+      <span>Roma: nuove misure per la mobilità sostenibile entro il 2028</span>
+      <span>Cultura: il Colosseo supera i 10 milioni di visitatori — record storico</span>
+      <span>Economia: inflazione in calo, famiglie ancora sotto pressione</span>
+      <span>h24italia su Instagram e TikTok: seguici per i video quotidiani</span>
+      <span>Il governo approva il decreto lavoro: le novità per il 2025</span>
+      <span>Borsa di Milano: tecnologici in rialzo dello 0.8%</span>
+      <span>Roma: nuove misure per la mobilità sostenibile entro il 2028</span>
+      <span>Cultura: il Colosseo supera i 10 milioni di visitatori — record storico</span>
+      <span>Economia: inflazione in calo, famiglie ancora sotto pressione</span>
+      <span>h24italia su Instagram e TikTok: seguici per i video quotidiani</span>
+    </div>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header>
+  <div class="header-top">
+    <a href="/" class="logo" aria-label="h24italia — Homepage">
+      <span class="logo-name">h24<em>italia</em></span>
+      <span class="logo-tagline">Il presente, ogni giorno</span>
+    </a>
+    <div class="header-date" id="live-date" aria-live="polite">
+      Venerdì<br>1 Maggio 2026
+    </div>
+  </div>
+  <nav aria-label="Navigazione principale">
+    <a href="#primo-piano" class="active">Primo piano</a>
+    <a href="#cronaca">Cronaca</a>
+    <a href="#economia">Economia</a>
+    <a href="#cultura">Cultura</a>
+    <a href="#societa">Società</a>
+    <a href="#territori">Territori</a>
+    <a href="#social-section">Social</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<main>
+  <section class="hero" aria-label="Articolo in evidenza" id="primo-piano">
+    <article class="hero-lead">
+      <div class="hero-kicker">Primo piano</div>
+      <div class="ai-image">
+        <div class="ai-image-inner">
+          <span class="ai-badge">Immagine generata con AI</span>
+        </div>
+      </div>
+      <h1>L'Italia che vuole <em>cambiare</em> e quella che non riesce a farlo</h1>
+      <p class="hero-standfirst">C'è un Paese che corre, innova, produce eccellenza. E c'è un Paese che arranca, che sperpera talento, che si racconta meglio di quanto sia. Capire quale dei due sia più reale — e dove si trovino i confini tra i due — è la domanda più urgente del nostro tempo.</p>
+      <p style="font-size:16px;color:var(--mid);line-height:1.8;max-width:640px;margin-bottom:28px;font-weight:300;">Il dibattito politico ed economico degli ultimi mesi ci ha restituito un Paese in perenne tensione con sé stesso: capace di risultati straordinari in certi settori, bloccato da inerzie decennali in altri. Dalla manifattura del Nord-Est al turismo del Mezzogiorno, dai poli universitari d'eccellenza alle falle infrastrutturali, il ritratto è quello di una nazione che non ha ancora deciso chi vuole essere.</p>
+      <a href="#" class="read-more">Leggi l'articolo</a>
+      <div class="hero-byline" style="margin-top:28px;padding-top:20px;border-top:1px solid var(--line);">
+        <span><strong>Marco Ferraris</strong></span>
+        <span>1 Maggio 2026</span>
+        <span>8 min lettura</span>
+      </div>
+    </article>
+    <aside class="hero-sidebar" aria-label="Articoli in evidenza">
+      <div class="sidebar-article">
+        <div class="sa-num">01</div>
+        <div class="sa-cat">Economia</div>
+        <div class="sa-title">Inflazione in calo ma il potere d'acquisto non si riprende: perché</div>
+      </div>
+      <div class="sidebar-article">
+        <div class="sa-num">02</div>
+        <div class="sa-cat">Tecnologia</div>
+        <div class="sa-title">L'intelligenza artificiale entra nelle scuole: cosa cambia davvero</div>
+      </div>
+      <div class="sidebar-article">
+        <div class="sa-num">03</div>
+        <div class="sa-cat">Cronaca</div>
+        <div class="sa-title">Il Tevere come non lo avete mai visto: il progetto che vuole ridare Roma ai romani</div>
+      </div>
+      <div class="sidebar-article">
+        <div class="sa-num">04</div>
+        <div class="sa-cat">Cultura</div>
+        <div class="sa-title">Record al Colosseo: dieci milioni di visitatori e il dibattito sulla sostenibilità del turismo</div>
+      </div>
+    </aside>
+  </section>
+
+  <!-- ARTICOLI PRIMARI -->
+  <div class="sh" id="cronaca">
+    <h2>Cronaca &amp; Società</h2>
+    <span class="sub">Le storie che contano</span>
+    <a href="#">Tutti gli articoli</a>
+  </div>
+
+  <div class="articles-wrap reveal">
+    <div class="prime-grid">
+      <article class="prime-card">
+        <div class="pc-cat">Economia · Approfondimento</div>
+        <div class="pc-image ai-image">
+          <div class="ai-image-inner ai-v2">
+            <span class="ai-badge">Immagine generata con AI</span>
+          </div>
+        </div>
+        <h2 class="pc-title large">Startup italiane, raccolta record: ma i fondatori fuggono ancora all'estero</h2>
+        <p class="pc-body">Oltre 2,3 miliardi di euro investiti nel primo trimestre del 2026. Numeri che fanno notizia, che rincuorano chi crede nel potenziale innovativo del Paese. Eppure dietro la superficie dei comunicati stampa, una storia diversa: i fondatori delle startup di maggior successo continuano a trasferire sede legale a Londra, Dublino o Berlino entro diciotto mesi dal primo round significativo. Un paradosso che racconta quanto il problema non sia la mancanza di talento, ma l'incapacità strutturale di trattenerlo.</p>
+        <div class="pc-meta">
+          <span><strong>Lucia Conti</strong></span>
+          <span>30 Apr 2026</span>
+          <span>6 min</span>
+        </div>
+        <a href="#" class="read-more" style="margin-top:16px;">Leggi tutto</a>
+      </article>
+      <article class="prime-card">
+        <div class="pc-cat">Società · Inchiesta</div>
+        <div class="pc-image ai-image">
+          <div class="ai-image-inner ai-v3">
+            <span class="ai-badge">Immagine generata con AI</span>
+          </div>
+        </div>
+        <h2 class="pc-title">Periferie: dove nasce davvero la politica italiana</h2>
+        <p class="pc-body">Tre mesi, sei quartieri, dodici città. Un'indagine sul terreno per capire come cambiano i consensi lontano dai centri, dove la rabbia si trasforma in scelta elettorale e dove si formano le narrazioni che poi arrivano nei salotti televisivi.</p>
+        <div class="pc-meta">
+          <span><strong>Andrea Mele</strong></span>
+          <span>29 Apr 2026</span>
+          <span>9 min</span>
+        </div>
+        <a href="#" class="read-more" style="margin-top:16px;">Leggi tutto</a>
+      </article>
+    </div>
+    <div class="second-grid">
+      <article class="sc-card">
+        <div class="sc-cat">Cultura</div>
+        <h3 class="sc-title">Il Colosseo a dieci milioni: quando il successo diventa un problema da risolvere</h3>
+        <p class="sc-body">Il record di visitatori è una notizia. Quello che si cela dietro — folla, sovraffollamento, tensioni con i residenti — è una storia più complessa che il solo dato numerico non racconta.</p>
+        <div class="sc-meta"><span>28 Apr · 4 min</span></div>
+      </article>
+      <article class="sc-card">
+        <div class="sc-cat">Ambiente</div>
+        <h3 class="sc-title">La siccità che arriva: il Sud Italia e il silenzio delle istituzioni sull'acqua</h3>
+        <p class="sc-body">I dati idrologici degli ultimi tre anni indicano una tendenza inequivocabile. Eppure i piani di adattamento restano sulla carta mentre le riserve idriche scendono a livelli critici.</p>
+        <div class="sc-meta"><span>27 Apr · 5 min</span></div>
+      </article>
+      <article class="sc-card">
+        <div class="sc-cat">Lavoro</div>
+        <h3 class="sc-title">La generazione dei quarantenni dimenticata: troppo vecchi per il digitale, troppo giovani per la pensione</h3>
+        <p class="sc-body">Tra riqualificazione professionale mai realizzata e mercato del lavoro che premia gli under trenta, una generazione intera rischia di restare fuori da ogni transizione economica.</p>
+        <div class="sc-meta"><span>26 Apr · 7 min</span></div>
+      </article>
+    </div>
+  </div>
+
+  <!-- PULL QUOTE -->
+  <div class="pull-quote reveal">
+    <div>
+      <blockquote>
+        Il problema dell'Italia non è la mancanza di <strong>idee</strong>, è la mancanza di strutture che permettano a quelle idee di sopravvivere abbastanza a lungo da diventare realtà.
+      </blockquote>
+      <cite>— Redazione h24italia, Editoriale del 1 Maggio 2026</cite>
+    </div>
+  </div>
+
+  <!-- DEEP READ BAND -->
+  <div class="deep-band">
+    <div class="deep-inner">
+      <div class="deep-divider" aria-hidden="true"></div>
+      <div>
+        <div class="deep-label">Approfondimento · Lunga lettura</div>
+        <h3><strong>L'Europa e noi:</strong> perché l'Italia conta meno di quanto meriti</h3>
+        <p>Un'analisi del peso reale dell'Italia nelle istituzioni europee: dalla Commissione al Parlamento, dai fondi strutturali alle nomine di vertice. Il divario tra la terza economia della zona euro e la sua capacità di incidere sulle decisioni che cambiano la vita di sessanta milioni di persone.</p>
+        <a href="#" class="deep-cta">Leggi la lunga lettura</a>
+      </div>
+      <div>
+        <div class="deep-label">Reportage · Sul campo</div>
+        <h3>Napoli, <em>cinque anni dopo</em>: la città che ha scelto sé stessa</h3>
+        <p>Cinque anni fa era un simbolo del declino urbano del Mezzogiorno. Oggi è diventata meta di nomadi digitali, set cinematografico internazionale, laboratorio gastronomico d'eccellenza. Ma la trasformazione è per tutti o soltanto per chi può permettersela?</p>
+        <a href="#" class="deep-cta">Leggi il reportage</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ECONOMIA -->
+  <div class="sh" id="economia">
+    <h2>Economia</h2>
+    <span class="sub">Dati, analisi, tendenze</span>
+    <a href="#">Tutte le storie</a>
+  </div>
+
+  <div class="territorio reveal">
+    <div class="territorio-grid">
+      <article class="terr-card">
+        <div class="terr-cat">Mercati</div>
+        <h3 class="terr-title">Il Ftse Mib e i timori di recessione: cosa dicono davvero i numeri</h3>
+        <p class="terr-body">I dati di Borsa di questa settimana vanno letti nel contesto di un ciclo economico in rallentamento. Le analisi superficiali parlano di rialzo, ma le componenti interne raccontano altro.</p>
+        <div class="terr-meta">30 Apr · 4 min</div>
+      </article>
+      <article class="terr-card">
+        <div class="terr-cat">Impresa</div>
+        <h3 class="terr-title">Le PMI italiane e la sfida della transizione digitale: un bilancio onesto</h3>
+        <p class="terr-body">Il piano Industria 5.0 ha stanziato risorse ingenti. A due anni dalla partenza, i risultati sono a macchia di leopardo: eccellenze nel Nord, diffuse difficoltà altrove.</p>
+        <div class="terr-meta">29 Apr · 5 min</div>
+      </article>
+      <article class="terr-card">
+        <div class="terr-cat">Turismo</div>
+        <h3 class="terr-title">Il turismo italiano vale 300 miliardi: ma ne cattura solo un quarto</h3>
+        <p class="terr-body">La spesa dei visitatori stranieri in Italia è enorme sulla carta. Il problema è nella catena del valore: gran parte dei ricavi finisce fuori dai confini nazionali, nelle mani di piattaforme e operatori esteri.</p>
+        <div class="terr-meta">28 Apr · 6 min</div>
+      </article>
+      <aside class="terr-sidebar">
+        <h4>Da non perdere</h4>
+        <div class="mini-item">
+          <div class="mini-cat">Milano</div>
+          <div class="mini-title">Il nuovo skyline e chi ci vive davvero</div>
+        </div>
+        <div class="mini-item">
+          <div class="mini-cat">Palermo</div>
+          <div class="mini-title">Il porto come motore economico del Mediterraneo</div>
+        </div>
+        <div class="mini-item">
+          <div class="mini-cat">Bologna</div>
+          <div class="mini-title">Innovazione alimentare: la Food Valley oltre i clichè</div>
+        </div>
+        <div class="mini-item">
+          <div class="mini-cat">Torino</div>
+          <div class="mini-title">Dopo l'auto: la reinvenzione silenziosa della città</div>
+        </div>
+        <div class="mini-item">
+          <div class="mini-cat">Matera</div>
+          <div class="mini-title">Capitale della cultura o set per turisti? Cinque anni dopo</div>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <!-- GOLD BAND -->
+  <div class="gold-band">
+    <p>"Informarsi non basta. Bisogna <strong>capire il contesto</strong>, leggere tra le righe, e non smettere mai di farsi domande scomode."</p>
+  </div>
+
+  <!-- SOCIAL VIDEO — minimal, no copyright issues -->
+  <section class="social-section" id="social-section" aria-label="I nostri video sui social">
+    <div class="social-inner">
+      <div class="social-head">
+        <div>
+          <h2>Su <em>Instagram</em> e TikTok</h2>
+        </div>
+        <p>I nostri video quotidiani: brevi, diretti, senza filtri. Storie italiane raccontate in verticale.</p>
+      </div>
+      <div class="social-cards">
+        <a href="https://instagram.com/h24italia" target="_blank" rel="noopener" class="social-card reveal" aria-label="Guarda il video su Instagram">
+          <div class="social-thumb">
+            <div class="ai-image-inner ai-v4">
+              <span class="ai-badge">AI image</span>
+            </div>
+            <span class="social-platform">Instagram</span>
+            <span class="social-views">2.4M</span>
+          </div>
+          <div class="social-card-body">
+            <div class="social-card-title">Roma alle 5 del mattino: la città che non conosci</div>
+            <div class="sc-link">Guarda su Instagram <span class="sc-arrow">→</span></div>
+          </div>
+        </a>
+        <a href="https://tiktok.com/@h24italia" target="_blank" rel="noopener" class="social-card reveal" aria-label="Guarda il video su TikTok" style="transition-delay:0.05s">
+          <div class="social-thumb">
+            <div class="ai-image-inner ai-v2">
+              <span class="ai-badge">AI image</span>
+            </div>
+            <span class="social-platform">TikTok</span>
+            <span class="social-views">3.7M</span>
+          </div>
+          <div class="social-card-body">
+            <div class="social-card-title">Il caffè napoletano raccontato da chi lo fa da tre generazioni</div>
+            <div class="sc-link">Guarda su TikTok <span class="sc-arrow">→</span></div>
+          </div>
+        </a>
+        <a href="https://instagram.com/h24italia" target="_blank" rel="noopener" class="social-card reveal" aria-label="Guarda il video su Instagram" style="transition-delay:0.1s">
+          <div class="social-thumb">
+            <div class="ai-image-inner ai-v3">
+              <span class="ai-badge">AI image</span>
+            </div>
+            <span class="social-platform">Instagram</span>
+            <span class="social-views">1.9M</span>
+          </div>
+          <div class="social-card-body">
+            <div class="social-card-title">Venezia svuotata: com'è la città senza turisti alle sei del mattino</div>
+            <div class="sc-link">Guarda su Instagram <span class="sc-arrow">→</span></div>
+          </div>
+        </a>
+        <a href="https://tiktok.com/@h24italia" target="_blank" rel="noopener" class="social-card reveal" aria-label="Guarda il video su TikTok" style="transition-delay:0.15s">
+          <div class="social-thumb">
+            <div class="ai-image-inner">
+              <span class="ai-badge">AI image</span>
+            </div>
+            <span class="social-platform">TikTok</span>
+            <span class="social-views">4.2M</span>
+          </div>
+          <div class="social-card-body">
+            <div class="social-card-title">La gelateria con la fila più lunga di Roma e il segreto che non ti aspetti</div>
+            <div class="sc-link">Guarda su TikTok <span class="sc-arrow">→</span></div>
+          </div>
+        </a>
+      </div>
+      <p class="social-disclaimer">I video sono disponibili sulle nostre pagine social ufficiali. Le immagini di anteprima sono generate con intelligenza artificiale per evitare problemi di copyright. Segui <strong>@h24italia</strong> su Instagram e TikTok.</p>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <div class="newsletter reveal" id="newsletter">
+    <div class="nl-text">
+      <h3>Il presente,<br>ogni mattina nella <em>tua</em> inbox</h3>
+      <p>Una selezione delle storie più importanti, scritte senza fretta e senza algoritmo. Gratis, ogni giorno, prima delle otto.</p>
+    </div>
+    <div>
+      <div class="nl-form" role="form" aria-label="Iscrizione newsletter">
+        <input type="email" placeholder="La tua email" aria-label="Inserisci la tua email">
+        <button type="button">Iscriviti</button>
+      </div>
+      <p style="font-size:11px;color:var(--muted);margin-top:10px;font-style:italic;">Niente spam. Cancellazione in un click. Privacy garantita.</p>
+    </div>
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div>
+      <div class="f-logo">h24<em>italia</em></div>
+      <p class="f-desc">Informazione italiana indipendente. Raccontiamo il Paese con rigore, profondità e uno sguardo editoriale libero da condizionamenti.</p>
+      <div class="f-social">
+        <a href="https://instagram.com/h24italia" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
+        <a href="https://tiktok.com/@h24italia" target="_blank" rel="noopener" aria-label="TikTok">TT</a>
+        <a href="#newsletter" aria-label="Newsletter">NL</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Sezioni</h4>
+      <a href="#primo-piano">Primo piano</a>
+      <a href="#cronaca">Cronaca</a>
+      <a href="#economia">Economia</a>
+      <a href="#cultura">Cultura</a>
+      <a href="#societa">Società</a>
+      <a href="#territori">Territori</a>
+    </div>
+    <div class="footer-col">
+      <h4>Segui</h4>
+      <a href="https://instagram.com/h24italia" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://tiktok.com/@h24italia" target="_blank" rel="noopener">TikTok</a>
+      <a href="#newsletter">Newsletter</a>
+    </div>
+    <div class="footer-col">
+      <h4>Redazione</h4>
+      <a href="#">Chi siamo</a>
+      <a href="#">Contatti</a>
+      <a href="#">Collabora</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Cookie Policy</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 h24italia — Tutti i diritti riservati</span>
+    <span>
+      <a href="#">Privacy</a> · <a href="#">Cookie</a> · <a href="#">Accessibilità</a>
+    </span>
+  </div>
+</footer>
+
+<script>
+  /* Date */
+  const D = ['Domenica','Lunedì','Martedì','Mercoledì','Giovedì','Venerdì','Sabato'];
+  const M = ['Gennaio','Febbraio','Marzo','Aprile','Maggio','Giugno','Luglio','Agosto','Settembre','Ottobre','Novembre','Dicembre'];
+  const n = new Date();
+  document.getElementById('live-date').innerHTML = `${D[n.getDay()]}<br>${n.getDate()} ${M[n.getMonth()]} ${n.getFullYear()}`;
+
+  /* Scroll reveal */
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.07 });
+  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+  /* Nav active on scroll */
+  const sections = document.querySelectorAll('section[id], div[id]');
+  const navLinks = document.querySelectorAll('nav a');
+  window.addEventListener('scroll', () => {
+    let cur = '';
+    sections.forEach(s => {
+      if (window.scrollY >= s.offsetTop - 120) cur = s.id;
+    });
+    navLinks.forEach(a => {
+      a.classList.remove('active');
+      if (a.getAttribute('href') === '#' + cur) a.classList.add('active');
+    });
+  }, { passive: true });
+</script>
+</body>
+</html>
