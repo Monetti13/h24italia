@@ -1,0 +1,35 @@
+[
+  {
+    "id": 1,
+    "categoria": "Primo Piano",
+    "titolo": "L'Italia che vuole cambiare e quella che non riesce a farlo",
+    "standfirst": "C'è un Paese che corre, innova, produce eccellenza. E c'è un Paese che arranca, che sperpera talento, che si racconta meglio di quanto sia.",
+    "corpo": "Il dibattito politico ed economico degli ultimi mesi ci ha restituito un Paese in perenne tensione con sé stesso: capace di risultati straordinari in certi settori, bloccato da inerzie decennali in altri. Dalla manifattura del Nord-Est al turismo del Mezzogiorno, dai poli universitari d'eccellenza alle falle infrastrutturali, il ritratto è quello di una nazione che non ha ancora deciso chi vuole essere.",
+    "autore": "Redazione",
+    "data": "1 Maggio 2026",
+    "minuti": 8,
+    "featured": true
+  },
+  {
+    "id": 2,
+    "categoria": "Economia",
+    "titolo": "Startup italiane, raccolta record: ma i fondatori fuggono ancora all'estero",
+    "standfirst": "Oltre 2,3 miliardi di euro investiti nel primo trimestre del 2026. Eppure i fondatori delle startup di maggior successo continuano a trasferire sede legale a Londra.",
+    "corpo": "Numeri che fanno notizia, che rincuorano chi crede nel potenziale innovativo del Paese. Eppure dietro la superficie dei comunicati stampa, una storia diversa: i fondatori delle startup di maggior successo continuano a trasferire sede legale a Londra, Dublino o Berlino entro diciotto mesi dal primo round significativo. Un paradosso che racconta quanto il problema non sia la mancanza di talento, ma l'incapacità strutturale di trattenerlo.",
+    "autore": "Lucia Conti",
+    "data": "30 Apr 2026",
+    "minuti": 6,
+    "featured": false
+  },
+  {
+    "id": 3,
+    "categoria": "Società",
+    "titolo": "Periferie: dove nasce davvero la politica italiana",
+    "standfirst": "Tre mesi, sei quartieri, dodici città. Un'indagine sul terreno per capire come cambiano i consensi lontano dai centri.",
+    "corpo": "Dove la rabbia si trasforma in scelta elettorale e dove si formano le narrazioni che poi arrivano nei salotti televisivi. Il futuro nasce ai margini. Reportage nelle aree dimenticate dalle grandi narrazioni.",
+    "autore": "Andrea Mele",
+    "data": "29 Apr 2026",
+    "minuti": 9,
+    "featured": false
+  }
+]
