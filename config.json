@@ -1,0 +1,53 @@
+{
+  "ticker": [
+    "Il governo approva il decreto lavoro: le novità per il 2025",
+    "Borsa di Milano: tecnologici in rialzo dello 0.8%",
+    "Roma: nuove misure per la mobilità sostenibile entro il 2028",
+    "Cultura: il Colosseo supera i 10 milioni di visitatori — record storico",
+    "Economia: inflazione in calo, famiglie ancora sotto pressione",
+    "h24italia su Instagram e TikTok: seguici per i video quotidiani"
+  ],
+  "hero": {
+    "categoria": "Primo Piano",
+    "titolo": "L'Italia che vuole cambiare e quella che non riesce a farlo",
+    "standfirst": "C'è un Paese che corre, innova, produce eccellenza. E c'è un Paese che arranca, che sperpera talento, che si racconta meglio di quanto sia.",
+    "corpo": "Il dibattito politico ed economico degli ultimi mesi ci ha restituito un Paese in perenne tensione con sé stesso: capace di risultati straordinari in certi settori, bloccato da inerzie decennali in altri.",
+    "autore": "Redazione",
+    "data": "1 Maggio 2026",
+    "minuti": 8
+  },
+  "sidebar": [
+    { "categoria": "Economia", "titolo": "Inflazione in calo ma il potere d'acquisto non si riprende: perché" },
+    { "categoria": "Tecnologia", "titolo": "L'intelligenza artificiale entra nelle scuole: cosa cambia davvero" },
+    { "categoria": "Cronaca", "titolo": "Il Tevere come non lo avete mai visto: il progetto che vuole ridare Roma ai romani" },
+    { "categoria": "Cultura", "titolo": "Record al Colosseo: dieci milioni di visitatori e il dibattito sulla sostenibilità" }
+  ],
+  "approfondimenti": [
+    {
+      "label": "Approfondimento · Lunga lettura",
+      "titolo": "L'Europa e noi: perché l'Italia conta meno di quanto meriti",
+      "corpo": "Un'analisi del peso reale dell'Italia nelle istituzioni europee: dalla Commissione al Parlamento, dai fondi strutturali alle nomine di vertice.",
+      "cta": "Leggi la lunga lettura"
+    },
+    {
+      "label": "Reportage · Sul campo",
+      "titolo": "Napoli, cinque anni dopo: la città che ha scelto sé stessa",
+      "corpo": "Cinque anni fa era un simbolo del declino urbano del Mezzogiorno. Oggi è diventata meta di nomadi digitali, set cinematografico internazionale, laboratorio gastronomico d'eccellenza.",
+      "cta": "Leggi il reportage"
+    }
+  ],
+  "pullquote": "Il problema dell'Italia non è la mancanza di idee, è la mancanza di strutture che permettano a quelle idee di sopravvivere abbastanza a lungo da diventare realtà.",
+  "pullquote_fonte": "Redazione h24italia, Editoriale del 1 Maggio 2026",
+  "social": [
+    { "platform": "Instagram", "titolo": "Roma alle 5 del mattino: la città che non conosci", "views": "2.4M", "url": "https://instagram.com/h24italia" },
+    { "platform": "TikTok", "titolo": "Il caffè napoletano raccontato da chi lo fa da tre generazioni", "views": "3.7M", "url": "https://tiktok.com/@h24italia" },
+    { "platform": "Instagram", "titolo": "Venezia svuotata: com'è la città senza turisti alle sei del mattino", "views": "1.9M", "url": "https://instagram.com/h24italia" },
+    { "platform": "TikTok", "titolo": "La gelateria con la fila più lunga di Roma e il segreto che non ti aspetti", "views": "4.2M", "url": "https://tiktok.com/@h24italia" }
+  ],
+  "goldbandquote": "Informarsi non basta. Bisogna capire il contesto, leggere tra le righe, e non smettere mai di farsi domande scomode.",
+  "newsletter_titolo": "Il presente, ogni mattina nella tua inbox",
+  "newsletter_testo": "Una selezione delle storie più importanti, scritte senza fretta e senza algoritmo. Gratis, ogni giorno, prima delle otto.",
+  "footer_desc": "Informazione italiana indipendente. Raccontiamo il Paese con rigore, profondità e uno sguardo editoriale libero da condizionamenti.",
+  "instagram_url": "https://instagram.com/h24italia",
+  "tiktok_url": "https://tiktok.com/@h24italia"
+}
